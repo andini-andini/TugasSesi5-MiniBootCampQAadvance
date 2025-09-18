@@ -6,9 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile
     working_dir: /app
-    volumes:
-      - .:/app
-    command: sh -lc "npm install && npm test"
-    # If you need interactive debugging:
+    command: npm test
     tty: true
     stdin_open: true
